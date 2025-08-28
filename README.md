@@ -1,93 +1,82 @@
-# 🐾 Site de Chatterie - Portfolio & Projet Familial
+# 🐾 Chatterie Milcoons
 
-Ce projet est un site vitrine de **chatterie**, développé avec **Next.js** et **TailwindCSS**.  
-Il permet aux visiteurs de :
-- Découvrir l’historique des chats (photos, informations, généalogie, etc.)
-- Contacter facilement les gérants
-- Mettre en avant le travail et la passion autour de l’élevage
+Site vitrine et outil d’administration pour la chatterie familiale Milcoons, développé en **Next.js** (React) et **Node.js**.  
+Ce projet permet de présenter les chats/chatons disponibles, de gérer leur statut, et de faciliter les contacts, tout en offrant une interface d’administration sécurisée.
 
-👉 Ce projet s’inscrit à la fois comme **aide pour ma famille** et comme **réalisation concrète pour mon portfolio**.
+## ✨ Fonctionnalités principales
 
----
+- Affichage des chats/chatons avec statut (“Disponible”, “Réservé”, etc.)
+- Galerie photos, fiches détaillées
+- Formulaire de contact
+- Interface d'administration sécurisée (ajout/modification/suppression des chats/chatons, gestion du statut)
+- Design responsive (mobile/tablette/desktop)
 
-## 🚀 Technologies utilisées
+## 🛠️ Stack technique
 
-- [Next.js](https://nextjs.org/) - Framework React moderne (SSR/SSG, API routes, etc.)
-- [React](https://reactjs.org/) - Librairie front-end
-- [TailwindCSS](https://tailwindcss.com/) - Framework CSS utilitaire pour un design rapide et moderne
-- [GitHub](https://github.com/) - Gestion du code et versioning
+- [Next.js](https://nextjs.org/) (React)
+- Node.js (API/Backend)
+- Base de données : MongoDB ou PostgreSQL (à préciser)
+- Authentification : NextAuth.js ou JWT
+- UI : Tailwind CSS (ou Chakra UI/Material UI selon choix)
+- Déploiement : Vercel ou autre
 
----
+## 🚀 Lancer le projet en local
 
-## 📦 Installation et démarrage
+1. **Cloner le repo**
+   ```bash
+   git clone https://github.com/corentin999/chatterie_milcoons.git
+   cd chatterie_milcoons
+   ```
 
-### 1. Cloner le projet
-```bash
-git clone https://github.com/ton-pseudo/ton-repo.git
-cd ton-repo
-```
+2. **Installer les dépendances**
+   ```bash
+   npm install
+   ```
 
-### 2. Installer les dépendances
-```bash
-npm install
-# ou
-yarn install
-```
+3. **Configurer les variables d'environnement**
+   - Copier `.env.example` en `.env.local` et compléter les valeurs nécessaires (base de données, secrets, etc.)
 
-### 3. Lancer le serveur de développement
-```bash
-npm run dev
-# ou
-yarn dev
-```
+4. **Lancer le serveur de développement**
+   ```bash
+   npm run dev
+   ```
 
-➡️ Le site sera disponible sur **http://localhost:3000**
+5. **Accéder au site**
+   - Public : [http://localhost:3000](http://localhost:3000)
+   - Admin : [http://localhost:3000/admin](http://localhost:3000/admin) (connexion requise)
 
----
+## 🔒 Sécurité
 
-## 📂 Structure du projet
+- L’interface d’administration est protégée par authentification.
+- **Ne jamais commiter d’identifiants ou secrets dans le dépôt public.**
+- Voir `.env.example` pour la configuration locale.
+
+## 📱 Responsive Design
+
+Le site est 100% responsive, adapté à tous les appareils.
+
+## 📂 Structure du projet (exemple)
 
 ```
 .
-├── pages/          # Pages Next.js (accueil, chats, contact, etc.)
-├── components/     # Composants réutilisables (carte de chat, formulaire de contact, etc.)
-├── public/         # Images et assets statiques (photos des chats)
-├── styles/         # Styles globaux (incluant Tailwind)
-└── README.md       # Ce fichier
+├── components/
+├── pages/
+│   ├── index.tsx
+│   ├── chats/
+│   └── admin/
+├── public/
+├── styles/
+├── utils/
+├── lib/
+├── README.md
+├── .env.example
+└── ...
 ```
 
----
+## 📝 Licence
 
-## 🎨 Objectifs du projet
-
-- Offrir une **présentation professionnelle et moderne** de la chatterie
-- Donner la possibilité aux visiteurs de **parcourir l’historique des chats**
-- Permettre un **contact simple et rapide** avec les gérants
-- Valoriser mes compétences en **React, Next.js et TailwindCSS**
+Projet open-source à but non commercial, pour portfolio et usage familial.
 
 ---
 
-## 📌 Roadmap
-
-- [ ] Structure de base du projet
-- [ ] Page d’accueil avec présentation de la chatterie
-- [ ] Page listant les chats avec leur historique
-- [ ] Formulaire de contact fonctionnel
-- [ ] Déploiement en ligne (Vercel ou autre hébergement)
-- [ ] Ajout d’améliorations (galerie photo, généalogie, etc.)
-
----
-
-## 🖥️ Déploiement
-
-Le projet peut être déployé facilement sur **[Vercel](https://vercel.com/)** :  
-```bash
-npm run build
-npm run start
-```
-
----
-
-## 📄 Licence
-
-Projet personnel – libre d’inspiration mais non destiné à un usage commercial sans autorisation.
+**Développé par [corentin999](https://github.com/corentin999)**
